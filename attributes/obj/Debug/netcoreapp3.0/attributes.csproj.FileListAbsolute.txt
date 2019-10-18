@@ -1,0 +1,11 @@
+D:\C-SHARP\attributes\obj\Debug\netcoreapp3.0\attributes.csprojAssemblyReference.cache
+D:\C-SHARP\attributes\obj\Debug\netcoreapp3.0\attributes.AssemblyInfoInputs.cache
+D:\C-SHARP\attributes\obj\Debug\netcoreapp3.0\attributes.AssemblyInfo.cs
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.exe
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.deps.json
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.runtimeconfig.json
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.runtimeconfig.dev.json
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.dll
+D:\C-SHARP\attributes\bin\Debug\netcoreapp3.0\attributes.pdb
+D:\C-SHARP\attributes\obj\Debug\netcoreapp3.0\attributes.dll
+D:\C-SHARP\attributes\obj\Debug\netcoreapp3.0\attributes.pdb

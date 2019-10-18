@@ -1,0 +1,11 @@
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.exe
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.deps.json
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.runtimeconfig.json
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.runtimeconfig.dev.json
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.dll
+D:\C-SHARP\tutorial-list\bin\Debug\netcoreapp3.0\tutorial-list.pdb
+D:\C-SHARP\tutorial-list\obj\Debug\netcoreapp3.0\tutorial-list.csprojAssemblyReference.cache
+D:\C-SHARP\tutorial-list\obj\Debug\netcoreapp3.0\tutorial-list.AssemblyInfoInputs.cache
+D:\C-SHARP\tutorial-list\obj\Debug\netcoreapp3.0\tutorial-list.AssemblyInfo.cs
+D:\C-SHARP\tutorial-list\obj\Debug\netcoreapp3.0\tutorial-list.dll
+D:\C-SHARP\tutorial-list\obj\Debug\netcoreapp3.0\tutorial-list.pdb

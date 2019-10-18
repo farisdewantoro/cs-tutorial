@@ -1,0 +1,11 @@
+D:\C-SHARP\BinarySearch\BinarySearch\bin\Debug\netcoreapp2.1\BinarySearch.deps.json
+D:\C-SHARP\BinarySearch\BinarySearch\bin\Debug\netcoreapp2.1\BinarySearch.runtimeconfig.json
+D:\C-SHARP\BinarySearch\BinarySearch\bin\Debug\netcoreapp2.1\BinarySearch.runtimeconfig.dev.json
+D:\C-SHARP\BinarySearch\BinarySearch\bin\Debug\netcoreapp2.1\BinarySearch.dll
+D:\C-SHARP\BinarySearch\BinarySearch\bin\Debug\netcoreapp2.1\BinarySearch.pdb
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.csprojAssemblyReference.cache
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.csproj.CoreCompileInputs.cache
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.AssemblyInfoInputs.cache
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.AssemblyInfo.cs
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.dll
+D:\C-SHARP\BinarySearch\BinarySearch\obj\Debug\netcoreapp2.1\BinarySearch.pdb

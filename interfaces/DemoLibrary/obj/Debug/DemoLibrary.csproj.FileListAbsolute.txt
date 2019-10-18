@@ -1,0 +1,5 @@
+D:\C-SHARP\interfaces\DemoLibrary\bin\Debug\DemoLibrary.dll
+D:\C-SHARP\interfaces\DemoLibrary\bin\Debug\DemoLibrary.pdb
+D:\C-SHARP\interfaces\DemoLibrary\obj\Debug\DemoLibrary.dll
+D:\C-SHARP\interfaces\DemoLibrary\obj\Debug\DemoLibrary.pdb
+D:\C-SHARP\interfaces\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache

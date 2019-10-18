@@ -1,0 +1,9 @@
+D:\C-SHARP\interfaces\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+D:\C-SHARP\interfaces\ConsoleUI\bin\Debug\ConsoleUI.exe
+D:\C-SHARP\interfaces\ConsoleUI\bin\Debug\ConsoleUI.pdb
+D:\C-SHARP\interfaces\ConsoleUI\bin\Debug\DemoLibrary.dll
+D:\C-SHARP\interfaces\ConsoleUI\bin\Debug\DemoLibrary.pdb
+D:\C-SHARP\interfaces\ConsoleUI\obj\Debug\ConsoleUI.csprojAssemblyReference.cache
+D:\C-SHARP\interfaces\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+D:\C-SHARP\interfaces\ConsoleUI\obj\Debug\ConsoleUI.exe
+D:\C-SHARP\interfaces\ConsoleUI\obj\Debug\ConsoleUI.pdb

@@ -1,0 +1,85 @@
+@*    
+INI COMMENT :
+
+
+STRONG TYPE VIEW 
+    @model testing1.Models.Employee;
+
+KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.Models JADI 
+    @model Employee;
+*@
+ 
+
+
+<!-- 
+    VIEW MODEL 
+ -->
+ 
+@*    
+INI COMMENT :
+SEBELUM DI IMPORT
+   @model testing1.ViewModels.HomeDetailViewModel;
+KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.ViewModels JADI :
+*@
+@model HomeDetailViewModel;
+<!-- APABILA MENGGUNAKAN STRONG TYPE / VIEW MODEL AKAN MENGURANGI TYPO ERROR DI RUN TIME -->
+
+
+    
+    <h1>MENGGUNAKAN VIEWDATA</h1>
+    <p>@ViewData["PageTitle"]</p>
+    @{
+        var employee = ViewData["Employee"] as testing1.Models.Employee;
+    }
+
+    <div>
+        Name : @employee.Name
+    </div>
+        <div>
+        Email : @employee.Email
+    </div>
+    <hr/>
+        <h1>MENGGUNAKAN VIEWBAG</h1>
+    <p>@ViewBag.PageTitle</p>
+       <div>
+        v : @ViewBag.Employee
+    </div>
+    <div>
+        Name : @ViewBag.Employee.Name
+    </div>
+        <div>
+        Email : @ViewBag.Employee.Email
+    </div>
+    @*
+    
+    <!-- <hr/>
+        <h1>MENGGUNAKAN STRONG TYPE VIEW </h1>
+              <div>
+        v : @Model
+    </div>
+    <div>
+        Name : @Model.Name
+    </div>
+        <div>
+        Email : @Model.Email
+    </div> -->
+
+    *@
+        <hr/>
+        <h1>MENGGUNAKAN VIEW MODEL <--- RECOMMEND</h1>
+
+       <div>
+        v : @Model.PageTitle
+    </div>
+    <div>
+        Name : @Model.Employee.Name
+    </div>
+        <div>
+        Email : @Model.Employee.Email
+    </div>
+    <a href="/" class="btn btn-primary">BACK</a>
+     <a href="/" class="btn btn-danger">DELETE</a>
+         <a href="/" class="btn btn-dark">EDIT</a>
+@section Scripts {
+    <script src="~/js/custom.js"> </script>
+}

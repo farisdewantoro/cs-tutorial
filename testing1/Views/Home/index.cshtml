@@ -1,0 +1,51 @@
+
+
+@*    
+INI COMMENT :
+SEBELUM DI IMPORT
+  @model IEnumerable<testing1.Models.Employee>
+KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.Models JADI :
+*@
+@model IEnumerable<Employee>
+
+@{
+    ViewBag.Title = "Employe List from Index";
+}
+
+<div class="container">
+
+
+
+<div class="row">
+        @foreach(var val in Model)
+        {
+                <div class="col-md-4 col-xs-1">
+    <div class="card" style="width: 100%;">
+    <img src="https://picsum.photos/150" asp-append-version="true" class="card-img-top" >
+     
+     <div class="card-body">
+    <h5 class="card-title">ID : @val.Id</h5>
+    <p class="card-text">NAME : @val.Name</p>
+        <p class="card-text">DEPARTMENT : @val.Department</p>
+   
+   <!-- RECOMMEND :-->
+            <a asp-controller="Home" asp-action="Details" asp-route-id="@val.Id"
+                class="btn btn-success"
+            >Display</a>
+
+
+    <a href='@Url.Action("details","home",new {Id=val.Id})'
+        class="btn btn-warning"
+    >Show</a>
+    @Html.ActionLink("View","details","home",new {Id = val.Id})
+    <a href="/home/details/@val.Id" class="btn btn-primary">VIEW</a>
+    <a href="#" class="btn btn-secondary">ADD</a>
+        <a href="#" class="btn btn-danger">REMOVE</a>
+  </div>
+</div>
+    </div>
+        }
+        </div>
+
+        </div>
+    </table>
