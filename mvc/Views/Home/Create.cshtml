@@ -1,0 +1,42 @@
+@model Employee;
+@inject IEmployeeRepository _empRepository;
+@{
+    ViewBag.Title="Create Employee";
+}
+
+<form asp-controller="home" asp-action="create" method="post">
+   <div>
+    <label asp-for="Name">Name</label>
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <input asp-for="Name"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+       <div>
+    <label asp-for="Email">Email</label>
+
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <input asp-for="Email"/>
+     <span asp-validation-for="Email" class="text-danger">  </span>
+    </div>
+       <div>
+    <label asp-for="Department">Department</label>
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
+        <option value="">Please Selected </option>
+    </select>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger">
+    </div>
+    <div>
+        <button type="submit">
+        Create
+        </button>
+    </div>
+    <div class="form-group row">
+        <div>
+        Total Employees Count :  @_empRepository.GetAllEmployee().Count()
+        </div>
+    </div>
+    
+</form>
