@@ -10182,11 +10182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\C-SHARP\\testing1\\testing1.csproj",
+      "projectUniqueName": "D:\\C-SHARP\\mvc\\testing1.csproj",
       "projectName": "testing1",
-      "projectPath": "d:\\C-SHARP\\testing1\\testing1.csproj",
+      "projectPath": "D:\\C-SHARP\\mvc\\testing1.csproj",
       "packagesPath": "C:\\Users\\m\\.nuget\\packages\\",
-      "outputPath": "d:\\C-SHARP\\testing1\\obj\\",
+      "outputPath": "D:\\C-SHARP\\mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
