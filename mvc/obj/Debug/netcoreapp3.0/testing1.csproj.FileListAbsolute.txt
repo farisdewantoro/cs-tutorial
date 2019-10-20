@@ -320,3 +320,4 @@ D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.Views.pdb
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.csproj.CopyComplete
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.dll
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.pdb
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Home\Edit.cshtml.g.cs

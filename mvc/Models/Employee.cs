@@ -21,5 +21,7 @@ namespace testing1.Models
         public string Email {get;set;}
         [Required]
         public Dept? Department{get;set;} //AGAR KETIKA MENDAPATKAN VALUE "" atau null tidak error dan validation error akan muncul ketika null
+        public string PhotoPath {get;set;}
+        
     }
 }

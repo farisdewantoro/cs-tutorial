@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using testing1.Models;
 using testing1.ViewModels;
@@ -15,9 +18,13 @@ namespace testing1.Controllers
     {
        
         private readonly IEmployeeRepository _employeeRepository;
-        public HomeController(IEmployeeRepository employeeRepository)
+        private readonly IWebHostEnvironment hostingEnvironment;
+
+        public HomeController(IEmployeeRepository employeeRepository,
+        IWebHostEnvironment hostingEnvironment)
         {
             _employeeRepository = employeeRepository;
+            this.hostingEnvironment = hostingEnvironment;
         }
         // public ObjectResult Details()
         // {
@@ -66,7 +73,7 @@ namespace testing1.Controllers
             // MENGGUNAKAN VIEW MODEL
             HomeDetailViewModel homeDetailViewModel = new HomeDetailViewModel()
             {
-                Employee = _employeeRepository.GetEmployee(1),
+                Employee = _employeeRepository.GetEmployee(id??1),
                 PageTitle = "Employee Details AHAY"
             };
             return View(homeDetailViewModel);
@@ -89,12 +96,98 @@ namespace testing1.Controllers
             return View();
         }
 
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public ViewResult Edit(int id)
+        {
+            Employee employee = _employeeRepository.GetEmployee(id);
+            EmployeeEditViewModel employeeEditViewModel = new EmployeeEditViewModel(){
+                Id = employee.Id,
+                Name = employee.Name,
+                Email = employee.Email,
+                Department = employee.Department,
+                ExistingPhotoPath = employee.PhotoPath
+            };
+            return View(employeeEditViewModel);
+        }
+        [Route("[action]/{id}")]
+        [HttpPost] //KARENA ADA 2 METHOD CREATE :
+        public IActionResult Edit(EmployeeEditViewModel model) //KARENA OUTPUTNYA BISA RedirectToAction dan View maka menggunakan Interface IActionResult KARENA TERDAPAT 2 ITU DIDALAM INTERFACE
+        {
+            if (ModelState.IsValid)
+            { //CEK PARAMETER MODEL VALID 
+                Employee employee = _employeeRepository.GetEmployee(model.Id); // => ID BERASAL DARI HIDDEN "INPUT FIELD ID"
+                employee.Name = model.Name;
+                employee.Email = model.Email;
+                employee.Department = model.Department;
+                if(model.Photo != null)
+                {
+                    // ERROR : The process cannot access the file 'file path' because it is being used by another process 
+                    //https://stackoverflow.com/questions/26741191/ioexception-the-process-cannot-access-the-file-file-path-because-it-is-being
+
+                    // if (model.ExistingPhotoPath != null)
+                    // {
+                    //     string filePath = Path.Combine(hostingEnvironment.WebRootPath, "images", model.ExistingPhotoPath);
+                    //     System.IO.File.Delete(filePath);
+                    // }
+
+
+                    string filePath = Path.Combine(hostingEnvironment.WebRootPath, "images", model.ExistingPhotoPath);
+                    if(System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);
+                    }
+                    employee.PhotoPath  = ProcessUploadedFile(model);
+                }
+
+            
+
+                _employeeRepository.Update(employee);
+                return RedirectToAction("index");
+            }
+            return View();
+
+        }
+
+        private string ProcessUploadedFile(EmployeeCreateViewModel model)
+        {
+            string uniqueFilename = null;
+            if (model.Photo != null && model.Photo.Count > 0)
+            {
+                foreach (IFormFile p in model.Photo)
+                {
+                    string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                    uniqueFilename = Guid.NewGuid().ToString() + "_" + p.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFilename);
+
+                    //karena filestream not properly disposed
+                    using(var fileStream = new FileStream(filePath, FileMode.Create)){
+                        p.CopyTo(fileStream);
+                    }
+                 
+
+                }
+
+            }
+
+            return uniqueFilename;
+        }
+
         [Route("[action]")]
         [HttpPost] //KARENA ADA 2 METHOD CREATE :
-        public IActionResult Create(Employee employee) //KARENA OUTPUTNYA BISA RedirectToAction dan View maka menggunakan Interface IActionResult KARENA TERDAPAT 2 ITU DIDALAM INTERFACE
+        public IActionResult Create(EmployeeCreateViewModel model) //KARENA OUTPUTNYA BISA RedirectToAction dan View maka menggunakan Interface IActionResult KARENA TERDAPAT 2 ITU DIDALAM INTERFACE
         {
             if(ModelState.IsValid){ //CEK PARAMETER MODEL VALID 
-                Employee newEmployee = _employeeRepository.Add(employee);
+                string uniqueFilename = ProcessUploadedFile(model);
+
+                Employee newEmployee = new Employee(){
+                    Name = model.Name,
+                    Email = model.Email,
+                    Department = model.Department,
+                    PhotoPath = uniqueFilename
+                };
+
+                _employeeRepository.Add(newEmployee);
                 return RedirectToAction("details", new { id = newEmployee.Id });
             }
             return View();

@@ -1,0 +1,81 @@
+@model EmployeeEditViewModel;
+@{
+    ViewBag.Title="Edit Employee";
+      var photoPath = "~/images/"+(Model.ExistingPhotoPath?? "noimage.jpg");
+   
+}
+
+<form enctype="multipart/form-data" asp-controller="home" asp-action="edit" method="post">
+   <input hidden asp-for="Id"  />
+  <input hidden asp-for="ExistingPhotoPath"  />
+   <div>
+    <label asp-for="Name">Name</label>
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <input asp-for="Name"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+       <div>
+    <label asp-for="Email">Email</label>
+
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <input asp-for="Email"/>
+     <span asp-validation-for="Email" class="text-danger">  </span>
+    </div>
+       <div>
+
+    <label asp-for="Department">Department</label>
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+    <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
+        <option value="">Please Selected </option>
+    </select>
+    </div>
+
+
+    <div>
+        <label asp-for="Photo">Photo</label>
+
+    <!-- HARUS MERUJUK KE MODEL YANG ADA KALO GA ERROR -->
+        <div class="custom-file">
+    <%-- KARENA Field Photo Menggunakan IFormFile jadi tidak perlu masukin type="input" --%>
+        <input asp-for="Photo" multiple class="form-control custom-file-input"/>
+        <label  class="custom-file-label">
+           Click here to change photo
+        </label>
+        </div>
+    </div>
+    
+    <div>
+        <img src="@photoPath" style="max-width:500px; max-height:200px;" class="img" asp-append-version="true"/>
+        
+    </div>
+
+    <div>
+        <div asp-validation-summary="All" class="text-danger">
+        </div>
+    </div>
+
+    <div>
+        <button type="submit">
+        Update
+        </button>
+        <a asp-controller="home" asp-action="index" class="btn btn-primary">Cancel</a>
+    </div>
+
+    @section Scripts{
+        <script>
+            $(document).ready(function(){
+                $('.custom-file-input').on("change",function(){
+                    var fileLabel = $(this).next('.custom-file-label');
+                
+                    var files = $(this)[0].files;
+                    if(files.length > 1){
+                        fileLabel.html(files.length + 'files selected');
+                    }else if(files.length == 1){
+                        fileLabel.html(files[0].name);
+                    }
+            
+                });
+            });
+        </script>
+    }
+</form>

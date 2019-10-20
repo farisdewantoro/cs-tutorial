@@ -34,9 +34,28 @@ namespace testing1.Migrations
                         .HasColumnType("varchar(50)")
                         .HasMaxLength(50);
 
+                    b.Property<string>("PhotoPath")
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Department = 2,
+                            Email = "mark@gmail.com",
+                            Name = "Mark"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Department = 2,
+                            Email = "faris@gmail.com",
+                            Name = "faris"
+                        });
                 });
 #pragma warning restore 612, 618
         }

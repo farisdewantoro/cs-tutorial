@@ -23,13 +23,23 @@ namespace testing1.Models
         // KALO SUDAH INSTALL :
         // dotnet ef -h <--check help
 
-
+        
+        //UNTUK REVERT ATAU UNDO KE MIGRATIONS SEBELUMNYA :
+        //MIGRATIONS SEPERTI COMMIT DI GIT
+            //dotnet ef database update [NAMA_MIGRATIONS]
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
             
         }
 
         public DbSet<Employee> Employees { get; set; } //DbSet<Employee> <=== Untuk create table Employees pada database ketika migrations 
-
+        
+        
+      
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // SEED DATA :
+            modelBuilder.Seed();
+        }
     }
 }

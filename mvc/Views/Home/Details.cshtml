@@ -30,8 +30,9 @@ KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.ViewModels JADI :
     <p>@ViewData["PageTitle"]</p>
     @{
         var employee = ViewData["Employee"] as testing1.Models.Employee;
+        var photoPath = "~/images/"+(Model.Employee.PhotoPath?? "noimage.jpg");
     }
-
+    
     <div>
         Name : @employee.Name
     </div>
@@ -67,7 +68,9 @@ KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.ViewModels JADI :
     *@
         <hr/>
         <h1>MENGGUNAKAN VIEW MODEL <--- RECOMMEND</h1>
-
+        <div>
+            <img src="@photoPath" style="max-width:100%;" asp-append-version="true"/>
+        </div>
        <div>
         v : @Model.PageTitle
     </div>
@@ -79,7 +82,9 @@ KARENA SUDAH DI IMPORT DI VIEWIMPORT : testing1.ViewModels JADI :
     </div>
     <a href="/" class="btn btn-primary">BACK</a>
      <a href="/" class="btn btn-danger">DELETE</a>
-         <a href="/" class="btn btn-dark">EDIT</a>
+        <a asp-controller="Home" asp-action="edit" asp-route-id="@Model.Employee.Id"
+                class="btn btn-success"
+            >Edit</a>
 @section Scripts {
     <script src="~/js/custom.js"> </script>
 }
