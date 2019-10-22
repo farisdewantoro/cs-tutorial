@@ -33,8 +33,15 @@ using testing1;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\C-SHARP\mvc\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c4", @"/Views/Home/index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a723e8c095410da34e0822646aefd5cb3b4d618a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d94b7c62fb68edc76a592c96ece31c172dd1a8ef", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Employee>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("card-img-top"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -90,7 +97,7 @@ using testing1;
 #line hidden
 #nullable disable
             WriteLiteral("                <div class=\"col-md-4 col-xs-1\">\r\n    <div class=\"card\" style=\"width: 100%;\">\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c45902", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c46061", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper>();
@@ -148,7 +155,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper.AppendVersion = true;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n   \r\n   <!-- RECOMMEND :-->\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c48817", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c48976", async() => {
                 WriteLiteral("Display");
             }
             );
@@ -211,7 +218,7 @@ WriteAttributeValue("", 1203, val.Id, 1203, 7, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn btn-primary\">VIEW</a>\r\n      ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c412334", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3d145d5315c54adc1e7ba8a63e8c8bacc8ad1c412493", async() => {
                 WriteLiteral("Edit");
             }
             );

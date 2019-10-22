@@ -1,0 +1,11 @@
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.exe
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.deps.json
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.runtimeconfig.json
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.runtimeconfig.dev.json
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.dll
+D:\C-SHARP\polymorphism\bin\Debug\netcoreapp3.0\polymorphism.pdb
+D:\C-SHARP\polymorphism\obj\Debug\netcoreapp3.0\polymorphism.csprojAssemblyReference.cache
+D:\C-SHARP\polymorphism\obj\Debug\netcoreapp3.0\polymorphism.AssemblyInfoInputs.cache
+D:\C-SHARP\polymorphism\obj\Debug\netcoreapp3.0\polymorphism.AssemblyInfo.cs
+D:\C-SHARP\polymorphism\obj\Debug\netcoreapp3.0\polymorphism.dll
+D:\C-SHARP\polymorphism\obj\Debug\netcoreapp3.0\polymorphism.pdb

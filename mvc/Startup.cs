@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using testing1.Models;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace testing1
 {
@@ -29,8 +30,28 @@ namespace testing1
             services.AddDbContextPool<AppDbContext>(options => options.UseMySql(_config.GetConnectionString("TestingConnection"))); //CONFIG DI appsettings.Development.json
 
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
-
+          
+          
+          
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+
+            // UNTUK CONFIGURASI VALIDATION ERROR :
+            // ADA 2 CARA, BISA LEWAT BIKIN BARU SEPERTI INI DAN BISA MELALUI AddIdentity
+            // services.Configure<IdentityOptions>(options=>{
+            //     options.Password.RequiredLength = 10;
+            //     options.Password.RequiredUniqueChars = 3;
+            // });
+
+
+
+            // IDENTITY :
+            services.AddIdentity<IdentityUser,IdentityRole>(options =>
+                {
+                    // bisa di lihat di IdentityOptions
+                    options.Password.RequiredLength = 10;
+                    options.Password.RequiredUniqueChars = 3;
+                }).AddEntityFrameworkStores<AppDbContext>();
 
             //    DEPEDENCY INJECTION
 
@@ -56,7 +77,12 @@ namespace testing1
                 {
                     SourceCodeLineCount = 20
                 };
-                app.UseDeveloperExceptionPage();
+        
+                 app.UseDeveloperExceptionPage();
+            }else{
+                //CEK CONTROLLER ERROR 
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}"); //UNTUK SEMUA ERROR PADA PRODUCTION AKAN DI REDIRECT
             }
 
             app.UseRouting();
@@ -73,6 +99,9 @@ namespace testing1
             //app.UseDefaultFiles(defaultFilesOptions);
             app.UseStaticFiles();
 
+            // IDENTITY / AUTH:
+            app.UseAuthentication();
+            
             //MVC
             // app.UseMvcWithDefaultRoute();
             // app.UseMvc(routes=>{

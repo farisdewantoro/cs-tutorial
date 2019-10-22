@@ -321,3 +321,17 @@ D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.csproj.CopyComplete
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.dll
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\testing1.pdb
 D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Home\Edit.cshtml.g.cs
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Home\EmployeeNotFound.cshtml.g.cs
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Shared\NotFound.cshtml.g.cs
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\nlog.config
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\NLog.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\NLog.Extensions.Logging.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\NLog.Web.AspNetCore.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Core.dll
+D:\C-SHARP\mvc\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.dll
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
+D:\C-SHARP\mvc\obj\Debug\netcoreapp3.0\Razor\Views\Account\Login.cshtml.g.cs

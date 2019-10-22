@@ -1,8 +1,13 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 namespace testing1.Models
-{
-    public class AppDbContext : DbContext
+{   
+    public class AppDbContext : IdentityDbContext //-->PERLU INSTALL Microsoft.AspNetCore.Identity.EntityFrameworkCore
+    //kalo menggunakan IdentityDbContext jangan lupa dotnet ef migrations add ["namaCommit"] dan dotnet ef database update
+
+
+    // public class AppDbContext : DbContext //--> Untuk yang tidak menggunakan identity
     {
 
         // INSTALL Microsoft.EntityFrameworkCore.SqlServer
@@ -38,6 +43,8 @@ namespace testing1.Models
       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder); //KARENA MENGGUNAKAN IDENTITY FRAMEWORK
+
             // SEED DATA :
             modelBuilder.Seed();
         }

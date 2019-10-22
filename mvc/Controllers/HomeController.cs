@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using testing1.Models;
 using testing1.ViewModels;
 
@@ -19,12 +20,17 @@ namespace testing1.Controllers
        
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IWebHostEnvironment hostingEnvironment;
+        private readonly ILogger logger;
 
         public HomeController(IEmployeeRepository employeeRepository,
-        IWebHostEnvironment hostingEnvironment)
+        IWebHostEnvironment hostingEnvironment,
+        ILogger<HomeController> logger
+        )
         {
+            
             _employeeRepository = employeeRepository;
             this.hostingEnvironment = hostingEnvironment;
+            this.logger = logger;
         }
         // public ObjectResult Details()
         // {
@@ -39,6 +45,9 @@ namespace testing1.Controllers
         //BISA JUGA PAKE QUERY STRING UNTUK PASS PARAMETER ID
         // public ViewResult DetailEdited(int? id) //=>MASIH JALAN ASAL PAS "RETURN" => return View("~/Views/Home/Details.cshtml")
         {
+             logger.LogTrace("trace Log");
+             logger.LogWarning("warning log");
+         
             //custom view render : jadi urlnya home/details tetapi yang dirender adalah Testing.cshtml
             // return View("Testing");
 
@@ -70,6 +79,13 @@ namespace testing1.Controllers
             // lebih cepat
             // return View(model); //tidak harus namanya model
 
+            Employee employee = _employeeRepository.GetEmployee(id.Value);
+            if(employee == null)
+            {
+                Response.StatusCode = 404;
+                return View("EmployeeNotFound", id.Value);
+            }
+
             // MENGGUNAKAN VIEW MODEL
             HomeDetailViewModel homeDetailViewModel = new HomeDetailViewModel()
             {
@@ -78,11 +94,12 @@ namespace testing1.Controllers
             };
             return View(homeDetailViewModel);
         }
+        
+      
 
         // ATTRIBUTES UNTUK MEMBUAT ROUTE NAME URL
         [Route("")] //tidak menggunakan /home
         [Route("~/")]
-        [Route("[action]")]
         public ViewResult Index()
         {
             var model = _employeeRepository.GetAllEmployee();

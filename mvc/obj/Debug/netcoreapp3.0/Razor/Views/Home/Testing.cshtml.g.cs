@@ -33,8 +33,15 @@ using testing1;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\C-SHARP\mvc\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"390d4cbc3801ecfabcb07e94f2b5b449f2f6155f", @"/Views/Home/Testing.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a723e8c095410da34e0822646aefd5cb3b4d618a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d94b7c62fb68edc76a592c96ece31c172dd1a8ef", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Testing : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -63,7 +70,7 @@ using testing1;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "390d4cbc3801ecfabcb07e94f2b5b449f2f6155f3272", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "390d4cbc3801ecfabcb07e94f2b5b449f2f6155f3431", async() => {
                 WriteLiteral("\r\n    <title>testing</title>\r\n");
             }
             );
@@ -77,7 +84,7 @@ using testing1;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "390d4cbc3801ecfabcb07e94f2b5b449f2f6155f4268", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "390d4cbc3801ecfabcb07e94f2b5b449f2f6155f4427", async() => {
                 WriteLiteral("\r\n    <p>From Testing</p>\r\n");
             }
             );
