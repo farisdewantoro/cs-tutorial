@@ -1,0 +1,5 @@
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SamuraiApp.Domain\bin\Debug\SamuraiApp.Domain.dll
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SamuraiApp.Domain\bin\Debug\SamuraiApp.Domain.pdb
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SamuraiApp.Domain\obj\Debug\SamuraiApp.Domain.csprojAssemblyReference.cache
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SamuraiApp.Domain\obj\Debug\SamuraiApp.Domain.dll
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SamuraiApp.Domain\obj\Debug\SamuraiApp.Domain.pdb

@@ -1,0 +1,10 @@
+D:\C-SHARP\entity_framework-core\testing\testing.core\bin\Debug\netcoreapp3.0\testing.core.deps.json
+D:\C-SHARP\entity_framework-core\testing\testing.core\bin\Debug\netcoreapp3.0\testing.core.runtimeconfig.json
+D:\C-SHARP\entity_framework-core\testing\testing.core\bin\Debug\netcoreapp3.0\testing.core.runtimeconfig.dev.json
+D:\C-SHARP\entity_framework-core\testing\testing.core\bin\Debug\netcoreapp3.0\testing.core.dll
+D:\C-SHARP\entity_framework-core\testing\testing.core\bin\Debug\netcoreapp3.0\testing.core.pdb
+D:\C-SHARP\entity_framework-core\testing\testing.core\obj\Debug\netcoreapp3.0\testing.core.csprojAssemblyReference.cache
+D:\C-SHARP\entity_framework-core\testing\testing.core\obj\Debug\netcoreapp3.0\testing.core.AssemblyInfoInputs.cache
+D:\C-SHARP\entity_framework-core\testing\testing.core\obj\Debug\netcoreapp3.0\testing.core.AssemblyInfo.cs
+D:\C-SHARP\entity_framework-core\testing\testing.core\obj\Debug\netcoreapp3.0\testing.core.dll
+D:\C-SHARP\entity_framework-core\testing\testing.core\obj\Debug\netcoreapp3.0\testing.core.pdb

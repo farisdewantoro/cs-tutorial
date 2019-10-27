@@ -1,0 +1,6 @@
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\bin\Debug\SomeUI.exe.config
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\bin\Debug\SomeUI.exe
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\bin\Debug\SomeUI.pdb
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\obj\Debug\SomeUI.csprojAssemblyReference.cache
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\obj\Debug\SomeUI.exe
+D:\C-SHARP\entity_framework-core\m3-exercise-files\SamuraiAppAfter\SomeUI\obj\Debug\SomeUI.pdb

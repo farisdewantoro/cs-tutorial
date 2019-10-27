@@ -1,0 +1,3 @@
+The BEFORE solution has all of the methods called in the first few modules for inserting and querying.
+In the AFTER solution you will find all of the rest of the methods. That is the only difference between the two solutions. 
+Also in the AFTER solution I have groupe the method calls in Program Main by using #if/#endif statements. Method calls surrounded by "#if true", will run and those surrounded by "#if false" will be ignored. This allows you to run sets of methods at your discretion rather than every single one at once. If you are reading this before watching the moduleyou will understand better afterwards because I demonstrated MANY methods in this module.

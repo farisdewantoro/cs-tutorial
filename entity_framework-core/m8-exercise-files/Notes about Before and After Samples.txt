@@ -1,0 +1,7 @@
+WPF:
+The "BEFORE" solution is the same "AFTER" solution from the WPF demo (EF Core WPF After) of Module 6 (Using EF Core in Client Applications).
+The AFTER solution here is after the tests have been fully implemented as per the module.
+
+ASPNET CORE:
+The "BEFORE" solution is the same "AFTER" solution from the ASP.Net Core demo (CoreWebApiAfter) of Module 7 (Using EF Core with ASP.NET Core).
+The AFTER solution here is after the tests have been fully implemented as per this module.

@@ -1,0 +1,3 @@
+The SamuraiApp BEFORE solution are the same as the AFTER solutions in Module 2 so it is not duplicated here in Module 3.
+
+There is no BEFORE solution for the SamuraiAppScaffolded module since it was also a new solution.

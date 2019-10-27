@@ -1,0 +1,7 @@
+WPF:
+The demo is not a true walk through, but it does have a "before" state which is what I'm showing you that's been added to the model. Keep in mind that I do not step through getting from before to after.
+The "after" has the full solution with both the samurai and battle windows implemented.
+
+UWP:
+There is no "before" solution for the EF Core UWP app because in the demo, this app was created from scratch.
+Also, please keep in mind that UWP apps can only be developed and run on Windows 10 machines.

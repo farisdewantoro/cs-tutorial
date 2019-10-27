@@ -1,0 +1,7 @@
+Visual Studio 2017 RC Demo:
+There is no "BEFORE" solution. I built up the solution by copying from the previous AFTER solution.
+
+Visual Studio Code:
+There are no BEFORE folders for either the Windows or Mac demos since each demo starts from scratch with dotnet new.
+
+

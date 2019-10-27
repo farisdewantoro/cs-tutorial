@@ -1,0 +1,8 @@
+Pluralsight
+Entity Framework Core: Getting Started
+Julie Lerman  (pluralsight.com/authors/julie-lerman)
+Released Feb 2017
+
+Samples for Module 3 "Exploring Mappings and Migrations"
+
+The solutions use Nuget package manager to restore packages and therefore require internet access to build.
